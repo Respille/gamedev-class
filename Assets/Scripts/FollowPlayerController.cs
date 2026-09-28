@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class FollowPlayerController : MonoBehaviour
 {
-    Vector3 distanceFromPlayer;
+    public Vector3 distanceFromPlayer;
+    public bool isMoving = true;
 
     [SerializeField]
     Transform playerTransform;
@@ -16,6 +17,9 @@ public class FollowPlayerController : MonoBehaviour
     // LateUpdate so camera follows player's updated position
     void LateUpdate()
     {
-        transform.position = playerTransform.position + distanceFromPlayer;
+        if (isMoving)
+        {
+            transform.position = playerTransform.position + distanceFromPlayer;
+        }
     }
 }

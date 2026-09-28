@@ -9,8 +9,6 @@ public class MovementController : MonoBehaviour
     bool isGrounded;
     float yVelocity = 0f;
     float yCoordinate;
-    float rotationAngle = 270f;
-    Vector3 rotationAxis = Vector3.up;
 
     [SerializeField]
     float moveSpeed = 5f;
@@ -23,6 +21,16 @@ public class MovementController : MonoBehaviour
 
     [SerializeField]
     Vector3 spawnPosition;
+
+    [SerializeField]
+    float rotationAngle;
+
+    [SerializeField]
+    Vector3 rotationAxis;
+
+    public float YVelocity { get => yVelocity; set => yVelocity = value; }
+    public float RotationAngle { get => rotationAngle; set => rotationAngle = value; }
+    public Vector3 RotationAxis { get => rotationAxis; set => rotationAxis = value; }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -73,7 +81,7 @@ public class MovementController : MonoBehaviour
 
         isJumpPressed = false; // Makes it so pressing space once does not make you jump forever
 
-        if (yCoordinate < -10) {
+        if (yCoordinate < -5) {
             transform.position = spawnPosition;
             yVelocity = 0;
         }
