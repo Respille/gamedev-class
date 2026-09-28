@@ -49,7 +49,7 @@ public class MovementController : MonoBehaviour
         {
             if (isJumpPressed) // Can only jump while grounded
             {
-                yVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity); ;
+                yVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
             }
             else if (yVelocity < 0)
             {
