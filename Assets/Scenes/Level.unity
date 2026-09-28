@@ -26433,7 +26433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FollowPlayerController
   distanceFromPlayer: {x: 0, y: 0, z: 0}
-  isMoving: 0
+  isMoving: 1
   playerTransform: {fileID: 1985507266}
 --- !u!1 &1961350964
 GameObject:
