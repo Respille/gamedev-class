@@ -18,6 +18,9 @@ public class MovementController : MonoBehaviour
     [SerializeField]
     float jumpHeight = 1f;
 
+    [SerializeField]
+    Vector3 spawnPosition;
+
     float yCoordinate;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -66,6 +69,11 @@ public class MovementController : MonoBehaviour
         controller.Move(new Vector3(xVelocity, yVelocity, zVelocity) * Time.deltaTime);
 
         isJumpPressed = false; // Makes it so pressing space once does not make you jump forever
+
+        if (yCoordinate < -10) {
+            transform.position = spawnPosition;
+            yVelocity = 0;
+        }
     }
 
     public void OnMove(InputValue value)
