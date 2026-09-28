@@ -6,7 +6,7 @@ public class JumpBlockTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("A plyer has entered!");
+            Debug.Log("A player has entered!");
         }
     }
 }
