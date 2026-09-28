@@ -8,6 +8,9 @@ public class MovementController : MonoBehaviour
     CharacterController controller;
     bool isGrounded;
     float yVelocity = 0f;
+    float yCoordinate;
+    float rotationAngle = 270f;
+    Vector3 rotationAxis = Vector3.up;
 
     [SerializeField]
     float moveSpeed = 5f;
@@ -20,8 +23,6 @@ public class MovementController : MonoBehaviour
 
     [SerializeField]
     Vector3 spawnPosition;
-
-    float yCoordinate;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -66,7 +67,9 @@ public class MovementController : MonoBehaviour
         float xVelocity = moveSpeed * moveInput.x;
         float zVelocity = moveSpeed * moveInput.y;
 
-        controller.Move(new Vector3(xVelocity, yVelocity, zVelocity) * Time.deltaTime);
+        Vector3 movementVec = new Vector3(xVelocity, yVelocity, zVelocity) * Time.deltaTime;
+        movementVec = RotateVector(movementVec, rotationAxis, rotationAngle);
+        controller.Move(movementVec);
 
         isJumpPressed = false; // Makes it so pressing space once does not make you jump forever
 
@@ -84,5 +87,10 @@ public class MovementController : MonoBehaviour
     public void OnJump(InputValue value)
     {
         isJumpPressed = true;
+    }
+
+    private Vector3 RotateVector(Vector3 original, Vector3 axis, float angle)
+    {
+        return Quaternion.AngleAxis(angle, axis) * original;
     }
 }
