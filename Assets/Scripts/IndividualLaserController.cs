@@ -10,6 +10,7 @@ public class IndividualLaserController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             SOPlayerStats.TakeDamage(damage);
+            Destroy(gameObject);
         }
     }
 }
