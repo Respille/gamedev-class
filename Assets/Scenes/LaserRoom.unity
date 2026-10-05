@@ -852,6 +852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LaserSpawner
   laserPrefab: {fileID: 4543267444051384186, guid: 64f67044e6614ac4884b9bd0b896500d, type: 3}
+  SOPlayerStats: {fileID: 11400000, guid: bd05bbe14d2590b4bb497841e719dbde, type: 2}
   SOLaserStats: {fileID: 11400000, guid: 4ae05757feb449547a8d809a63eb973c, type: 2}
   leftX: -5
   rightX: 5
@@ -1543,6 +1544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c136f66a57d36c4db5e941bed6833cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FollowPlayerController
+  SOPlayerStats: {fileID: 11400000, guid: bd05bbe14d2590b4bb497841e719dbde, type: 2}
   playerTransform: {fileID: 1232042251}
   smoothingFactor: 5
 --- !u!1 &788447917
@@ -4354,6 +4356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ebc1aae72110244da5c9b2833161331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovementController
+  SOPlayerStats: {fileID: 11400000, guid: bd05bbe14d2590b4bb497841e719dbde, type: 2}
   moveSpeed: 5
   gravity: -10
   jumpHeight: 1.5

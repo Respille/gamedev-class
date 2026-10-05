@@ -1,9 +1,11 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class LaserSpawner : MonoBehaviour
 {
     [SerializeField] GameObject laserPrefab;
+    [SerializeField] SOPlayerStats SOPlayerStats;
     [SerializeField] SOLaserStats SOLaserStats;
     [SerializeField] float leftX;
     [SerializeField] float rightX;
@@ -15,12 +17,41 @@ public class LaserSpawner : MonoBehaviour
     Coroutine spawningCoroutine;
     float centerX;
     float distanceBetweenLasers;
+    List<GameObject> instantiatedLasers = new();
 
     void Start()
     {
         spawningCoroutine = StartCoroutine(SpawnLasers());
         centerX = (leftX + rightX) / 2;
         distanceBetweenLasers = SOLaserStats.LaserSpeed * SOLaserStats.SpawnPeriod;
+        PopulateLasers();
+    }
+
+    void OnEnable()
+    {
+        SOPlayerStats.GameOverAction += Reset;
+    }
+
+    void OnDisable()
+    {
+        SOPlayerStats.GameOverAction -= Reset;
+    }
+
+    void Reset()
+    {
+        if (spawningCoroutine != null) // stop coroutine that's still running
+        {
+            StopCoroutine(spawningCoroutine);
+            spawningCoroutine = null;
+        }
+
+        foreach (GameObject laser in instantiatedLasers)
+        {
+            Destroy(laser);
+        }
+        instantiatedLasers.Clear();
+
+        spawningCoroutine = StartCoroutine(SpawnLasers());
         PopulateLasers();
     }
 
@@ -57,6 +88,7 @@ public class LaserSpawner : MonoBehaviour
         Quaternion spawnRotation = Quaternion.Euler(0, 0, rotation + 90); // +90 because laser is initially horizontal
 
         GameObject newLaser = Instantiate(laserPrefab, spawnPosition, spawnRotation);
+        instantiatedLasers.Add(newLaser);
     }
 
     IEnumerator SpawnLasers()

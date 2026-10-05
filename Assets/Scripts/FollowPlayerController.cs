@@ -4,7 +4,9 @@ using UnityEngine.UIElements;
 public class FollowPlayerController : MonoBehaviour
 {
     float distanceFromPlayer; // only on the z-axis
+    Vector3 initialPosition;
 
+    [SerializeField] SOPlayerStats SOPlayerStats;
     [SerializeField] Transform playerTransform;
     [SerializeField] float smoothingFactor = 5f;
 
@@ -12,6 +14,22 @@ public class FollowPlayerController : MonoBehaviour
     void Start()
     {
         distanceFromPlayer = transform.position.z - playerTransform.position.z;
+        initialPosition = transform.position;
+    }
+
+    void OnEnable()
+    {
+        SOPlayerStats.GameOverAction += Reset;
+    }
+
+    void OnDisable()
+    {
+        SOPlayerStats.GameOverAction -= Reset;
+    }
+
+    void Reset()
+    {
+        transform.position = initialPosition;
     }
 
     // LateUpdate so camera follows player's updated position

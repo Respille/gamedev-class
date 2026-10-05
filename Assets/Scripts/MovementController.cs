@@ -11,14 +11,11 @@ public class MovementController : MonoBehaviour
     float yCoordinate;
     Vector3 spawnPosition;
 
+    [SerializeField] SOPlayerStats SOPlayerStats;
     [SerializeField] float moveSpeed = 5f;
-
     [SerializeField] float gravity = -10f;
-
     [SerializeField] float jumpHeight = 1f;
-
     [SerializeField] float rotationAngle;
-
     [SerializeField] Vector3 rotationAxis;
 
     public float YVelocity { get => yVelocity; set => yVelocity = value; }
@@ -31,6 +28,24 @@ public class MovementController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         yCoordinate = transform.position.y;
         spawnPosition = transform.position;
+    }
+
+    void OnEnable()
+    {
+        SOPlayerStats.GameOverAction += Reset;
+    }
+
+    void OnDisable()
+    {
+        SOPlayerStats.GameOverAction -= Reset;
+    }
+
+    void Reset()
+    {
+        controller.enabled = false;
+        transform.position = spawnPosition;
+        yCoordinate = transform.position.y;
+        controller.enabled = true;
     }
 
     // Update is called once per frame
