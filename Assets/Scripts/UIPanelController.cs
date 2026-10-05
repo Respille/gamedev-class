@@ -10,11 +10,13 @@ public class UIPanelController : MonoBehaviour
     void OnEnable()
     {
         SOPlayerStats.GameOverAction += ShowGameOverScreen;
+        SOPlayerStats.VictoryAction += ShowVictoryScreen;
     }
 
     void OnDisable()
     {
         SOPlayerStats.GameOverAction -= ShowGameOverScreen;
+        SOPlayerStats.VictoryAction -= ShowVictoryScreen;
     }
 
     public void ShowGameOverScreen()
@@ -32,5 +34,10 @@ public class UIPanelController : MonoBehaviour
         gameOverPanel.SetActive(false);
         Time.timeScale = 1;
         yield break;
+    }
+
+    public void ShowVictoryScreen()
+    {
+        victoryPanel.SetActive(true);
     }
 }

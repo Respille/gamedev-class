@@ -8,6 +8,7 @@ public class SOPlayerStats : ScriptableObject
     public float initialBaseMoveSpeed = 5f;
     public event Action HealthChangedAction;
     public event Action GameOverAction;
+    public event Action VictoryAction;
 
     private int _health;
     public int Health
@@ -63,6 +64,12 @@ public class SOPlayerStats : ScriptableObject
     {
         GameOverAction?.Invoke();
         ResetValues();
+    }
+
+    public void TriggerVictory()
+    {
+        VictoryAction?.Invoke();
+        Time.timeScale = 0f;
     }
 
     public void TriggerRandomBonus()
