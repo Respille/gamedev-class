@@ -1,29 +1,23 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CameraTest : MonoBehaviour
+public class PlayerRotation : MonoBehaviour
 {
     [SerializeField] float horizontalSensitivity = 0.3f;
     [SerializeField] float verticalSensitivity = 0.3f;
 
     float horizontalRotation;
     float verticalRotation;
-    Camera mainCamera;
-    Transform mainCameraTransform;
-    GameObject player;
     bool secondFrameOrBefore = true;
     int frameCount = 0;
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked; // Locks cursor to center of screen
-        mainCamera = Camera.main;
-        mainCameraTransform = mainCamera.transform;
-        player = GameObject.FindWithTag("Player");
 
         // To change initial rotation of camera, just move the camera in the editor
-        horizontalRotation = mainCameraTransform.localRotation.eulerAngles.y;
-        verticalRotation = mainCameraTransform.localRotation.eulerAngles.x;
+        horizontalRotation = transform.localRotation.eulerAngles.y;
+        verticalRotation = transform.localRotation.eulerAngles.x;
     }
 
     void Update()
@@ -46,6 +40,6 @@ public class CameraTest : MonoBehaviour
         verticalRotation -= mouseY * verticalSensitivity;
         verticalRotation = Mathf.Clamp(verticalRotation, -90f, 90f); // Prevents looking upside down
 
-        mainCameraTransform.localEulerAngles = new Vector3(verticalRotation, horizontalRotation, 0f);
+        transform.localEulerAngles = new Vector3(verticalRotation, horizontalRotation, 0f);
     }
 }

@@ -9,24 +9,17 @@ public class MovementController : MonoBehaviour
     bool isGrounded;
     float yVelocity = 0f;
     float yCoordinate;
-
-    [SerializeField]
-    float moveSpeed = 5f;
-
-    [SerializeField]
-    float gravity = -10f;
-
-    [SerializeField]
-    float jumpHeight = 1f;
-
-    [SerializeField]
     Vector3 spawnPosition;
 
-    [SerializeField]
-    float rotationAngle;
+    [SerializeField] float moveSpeed = 5f;
 
-    [SerializeField]
-    Vector3 rotationAxis;
+    [SerializeField] float gravity = -10f;
+
+    [SerializeField] float jumpHeight = 1f;
+
+    [SerializeField] float rotationAngle;
+
+    [SerializeField] Vector3 rotationAxis;
 
     public float YVelocity { get => yVelocity; set => yVelocity = value; }
     public float RotationAngle { get => rotationAngle; set => rotationAngle = value; }
@@ -37,6 +30,7 @@ public class MovementController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         yCoordinate = transform.position.y;
+        spawnPosition = transform.position;
     }
 
     // Update is called once per frame
