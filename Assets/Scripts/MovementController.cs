@@ -85,13 +85,11 @@ public class MovementController : MonoBehaviour
     public void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
-        print("Moving");
     }
 
     public void OnJump(InputValue value)
     {
         isJumpPressed = true;
-        print("Jumping");
     }
 
     private Vector3 RotateVector(Vector3 original, Vector3 axis, float angle)
