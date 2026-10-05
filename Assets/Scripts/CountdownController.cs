@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CountdownController : MonoBehaviour
 {
+    [SerializeField] SOPlayerStats SOPlayerStats;
     [SerializeField] int initialCountdown = 99;
     [SerializeField] TextMeshProUGUI countdownText;
 
@@ -18,13 +19,38 @@ public class CountdownController : MonoBehaviour
         countdownCoroutine = StartCoroutine(Countdown());
     }
 
+    void OnEnable()
+    {
+        SOPlayerStats.GameOverAction += Reset;
+    }
+
+    void OnDisable()
+    {
+        SOPlayerStats.GameOverAction -= Reset;
+    }
+
+    void Reset()
+    {
+        if (countdownCoroutine != null)
+        {
+            StopCoroutine(countdownCoroutine);
+            countdownCoroutine = null;
+        }
+        countdown = initialCountdown;
+        countdownText.text = countdown.ToString();
+        countdownCoroutine = StartCoroutine(Countdown());
+    }
+
     IEnumerator Countdown()
     {
-        while (true)
+        while (countdown > 0)
         {
             yield return new WaitForSeconds(1f);
             countdown--;
             countdownText.text = countdown.ToString();
         }
+        countdownCoroutine = null;
+        SOPlayerStats.TriggerGameOver();
+        yield break;
     }
 }

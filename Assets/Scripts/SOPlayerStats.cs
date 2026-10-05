@@ -35,7 +35,7 @@ public class SOPlayerStats : ScriptableObject
             Health -= damage;
             if (Health <= 0)
             {
-                GameOverAction?.Invoke();
+                TriggerGameOver();
                 ResetValues();
             }
         }
@@ -55,6 +55,12 @@ public class SOPlayerStats : ScriptableObject
         {
             throw new ArgumentOutOfRangeException(nameof(healing), "Cannot have negative or zero healing");
         }
+    }
+
+    public void TriggerGameOver()
+    {
+        GameOverAction?.Invoke();
+        ResetValues();
     }
 
     public void TriggerRandomBonus()
