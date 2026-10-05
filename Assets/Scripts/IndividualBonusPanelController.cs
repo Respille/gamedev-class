@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class VictoryZoneController : MonoBehaviour
+public class IndividualBonusPanelController : MonoBehaviour
 {
     [SerializeField] SOPlayerStats SOPlayerStats;
 
@@ -8,7 +8,8 @@ public class VictoryZoneController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SOPlayerStats.TriggerVictory();
+            SOPlayerStats.TriggerRandomBonus();
+            Destroy(gameObject);
         }
     }
 }

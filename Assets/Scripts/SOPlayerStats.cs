@@ -22,8 +22,8 @@ public class SOPlayerStats : ScriptableObject
     }
     public float BaseMoveSpeed { get; private set; }
 
-    [SerializeField] CountdownController countdownController;
-    [SerializeField] UIBonusController uiBonusController;
+    public CountdownController countdownController;
+    public UIBonusController uiBonusController;
 
     public void ResetValues()
     {
