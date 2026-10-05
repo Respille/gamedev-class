@@ -3,21 +3,25 @@ using UnityEngine;
 public class IndividualLaserController : MonoBehaviour
 {
     [SerializeField] SOPlayerStats SOPlayerStats;
-    [SerializeField] float laserSpeed = 5f;
-    [SerializeField] int damage = 10;
+    [SerializeField] SOLaserStats SOLaserStats;
 
     void Update()
     {
         Vector3 position = transform.position;
-        position.z -= laserSpeed * Time.deltaTime;
+        position.z -= SOLaserStats.LaserSpeed * Time.deltaTime;
         transform.position = position;
+
+        if (position.z < -50)
+        {
+            Destroy(gameObject); // destroy laser once it has gone out of bounds
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SOPlayerStats.TakeDamage(damage);
+            SOPlayerStats.TakeDamage(SOLaserStats.Damage);
             Destroy(gameObject);
         }
     }

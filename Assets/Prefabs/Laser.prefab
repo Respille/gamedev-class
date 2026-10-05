@@ -4483,5 +4483,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IndividualLaserController
   SOPlayerStats: {fileID: 11400000, guid: bd05bbe14d2590b4bb497841e719dbde, type: 2}
-  laserSpeed: 5
-  damage: 10
+  SOLaserStats: {fileID: 11400000, guid: 4ae05757feb449547a8d809a63eb973c, type: 2}
