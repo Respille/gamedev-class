@@ -20,8 +20,6 @@ public class LaserSpawner : MonoBehaviour
     {
         spawningCoroutine = StartCoroutine(SpawnLasers());
         centerX = (leftX + rightX) / 2;
-        print(SOLaserStats.LaserSpeed);
-        print(SOLaserStats.SpawnPeriod);
         distanceBetweenLasers = SOLaserStats.LaserSpeed * SOLaserStats.SpawnPeriod;
         PopulateLasers();
     }

@@ -11,7 +11,7 @@ public class IndividualLaserController : MonoBehaviour
         position.z -= SOLaserStats.LaserSpeed * Time.deltaTime;
         transform.position = position;
 
-        if (position.z < -50)
+        if (position.z < -101)
         {
             Destroy(gameObject); // destroy laser once it has gone out of bounds
         }
