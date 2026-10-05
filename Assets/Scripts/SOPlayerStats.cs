@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "SOPlayerStats", menuName = "Custom/Scriptable Objects/Player Stats")]
@@ -21,6 +20,9 @@ public class SOPlayerStats : ScriptableObject
         }
     }
     public float BaseMoveSpeed { get; private set; }
+
+    [SerializeField] CountdownController countdownController;
+    [SerializeField] UIBonusController uiBonusController;
 
     public void ResetValues()
     {
@@ -65,6 +67,23 @@ public class SOPlayerStats : ScriptableObject
 
     public void TriggerRandomBonus()
     {
+        // three possibilities: more health, more time, more speed
+        int randomBonus = UnityEngine.Random.Range(1, 4); // 1, 2, or 3
 
+        if (randomBonus == 1) // more health
+        {
+            Heal(10);
+            uiBonusController.SetBonusText("Health increased!");
+        }
+        else if (randomBonus == 2) // more time
+        {
+            countdownController.IncreaseCountdown(10);
+            uiBonusController.SetBonusText("Time increased!");
+        }
+        else // more speed
+        {
+            BaseMoveSpeed += 2f;
+            uiBonusController.SetBonusText("Speed increased!");
+        }
     }
 }

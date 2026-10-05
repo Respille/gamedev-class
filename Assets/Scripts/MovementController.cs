@@ -12,7 +12,6 @@ public class MovementController : MonoBehaviour
     Vector3 spawnPosition;
 
     [SerializeField] SOPlayerStats SOPlayerStats;
-    [SerializeField] float moveSpeed = 5f;
     [SerializeField] float gravity = -10f;
     [SerializeField] float jumpHeight = 1f;
     [SerializeField] float rotationAngle;
@@ -81,6 +80,7 @@ public class MovementController : MonoBehaviour
             yVelocity = 0;
         }
 
+        float moveSpeed = SOPlayerStats.BaseMoveSpeed;
         float xVelocity = moveSpeed * moveInput.x;
         float zVelocity = moveSpeed * moveInput.y;
 

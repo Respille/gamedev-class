@@ -53,4 +53,10 @@ public class CountdownController : MonoBehaviour
         SOPlayerStats.TriggerGameOver();
         yield break;
     }
+
+    public void IncreaseCountdown(int amount)
+    {
+        countdown += amount;
+        countdownText.text = countdown.ToString();
+    }
 }
