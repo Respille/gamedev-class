@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c230ab88d8861f443b4e7336ab2f4059, type: 3}
   m_Name: SOPlayerStats
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
-  health: 100
-  baseMoveSpeed: 5
+  initialHealth: 100
+  initialBaseMoveSpeed: 5
+  countdownController: {fileID: 0}
+  uiBonusController: {fileID: 0}
