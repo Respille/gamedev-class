@@ -57,21 +57,6 @@ public class LaserSpawner : MonoBehaviour
 
     void SpawnLaser(float z)
     {
-        /*
-            // make sure lasers can actually hit the player
-            bool randomBool = Random.value > 0.5f;
-            float leftY, rightY;            
-            if (randomBool)
-            {
-                leftY = Random.Range(minY, maxY);
-                rightY = leftY + (2 - leftY) * 2;
-            }
-            else
-            {
-                rightY = Random.Range(minY, maxY);
-                leftY = rightY + (2 - rightY) * 2;
-            }
-            */
         float leftY, rightY;
         do
         {
