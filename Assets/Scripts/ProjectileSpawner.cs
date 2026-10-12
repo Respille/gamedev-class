@@ -3,6 +3,9 @@ using UnityEngine.InputSystem;
 
 public class ProjectileSpawner : MonoBehaviour
 {
+    [SerializeField] Transform playerTransform;
+    [SerializeField] GameObject projectilePrefab;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,7 +17,8 @@ public class ProjectileSpawner : MonoBehaviour
     {
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
-            print("Mouse clicked");
+            Vector3 playerPos = playerTransform.position;
+            Instantiate(projectilePrefab, playerPos, Quaternion.identity);
         }
     }
 }

@@ -119,6 +119,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &219175815 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9132312566646045020, guid: cf382129451ae3d4781f11b3523a06c9, type: 3}
+  m_PrefabInstance: {fileID: 1298872708728493955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &219175821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219175815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49625c646c99b874bb4e7b75b23c1ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Projectile
+  launchForce: 10
 --- !u!1 &616276802
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,6 +353,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e90a5810a30c73498ea0fd934a4e783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProjectileSpawner
+  playerTransform: {fileID: 0}
+  projectilePrefab: {fileID: 0}
 --- !u!1 &1161464456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,15 +1208,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6218216375844668828, guid: cf382129451ae3d4781f11b3523a06c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.22
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 6218216375844668828, guid: cf382129451ae3d4781f11b3523a06c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.19
+      value: 2.95
       objectReference: {fileID: 0}
     - target: {fileID: 6218216375844668828, guid: cf382129451ae3d4781f11b3523a06c9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.53296
+      value: 3.02
       objectReference: {fileID: 0}
     - target: {fileID: 6218216375844668828, guid: cf382129451ae3d4781f11b3523a06c9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1233,7 +1253,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9132312566646045020, guid: cf382129451ae3d4781f11b3523a06c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 219175821}
   m_SourcePrefab: {fileID: 100100000, guid: cf382129451ae3d4781f11b3523a06c9, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
