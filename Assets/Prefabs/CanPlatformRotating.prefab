@@ -67,16 +67,19 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5245083154745920103, guid: 7a909dda2bd8a0649a10e60f11e80030, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5681674954750044237}
+    - targetCorrespondingSourceObject: {fileID: 5245083154745920103, guid: 7a909dda2bd8a0649a10e60f11e80030, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4537492246946182548}
     - targetCorrespondingSourceObject: {fileID: 3102229209041942409, guid: 7a909dda2bd8a0649a10e60f11e80030, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6850597613390209854}
+      addedObject: {fileID: 8158382952533213143}
   m_SourcePrefab: {fileID: 100100000, guid: 7a909dda2bd8a0649a10e60f11e80030, type: 3}
 --- !u!1 &3651925176840291792 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3102229209041942409, guid: 7a909dda2bd8a0649a10e60f11e80030, type: 3}
   m_PrefabInstance: {fileID: 1847438602780684889}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6850597613390209854
+--- !u!114 &8158382952533213143
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,7 +91,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1174e129d7f274344af53e296852c095, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetection
-  forceMagnitude: 10
 --- !u!1 &5866269227384715326 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5245083154745920103, guid: 7a909dda2bd8a0649a10e60f11e80030, type: 3}
@@ -108,3 +110,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RotateAround
   target: {fileID: 0}
   rotationSpeed: 45
+--- !u!54 &4537492246946182548
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5866269227384715326}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
