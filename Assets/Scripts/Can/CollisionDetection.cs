@@ -21,7 +21,7 @@ public class CollisionDetection : MonoBehaviour
             Vector3 incomingVelocity = projectileRb.linearVelocity;
             ContactPoint contact = collision.GetContact(0);
 
-            // Launch projectile normally (otherwise it doesn't really get launched, probably because we just turned isKinematic off now)
+            // Launch projectile manually (otherwise it doesn't really get launched, probably because I just turned isKinematic off now)
             rb.isKinematic = false;
             rb.AddForceAtPosition(
                 incomingVelocity * projectileRb.mass,
