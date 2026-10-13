@@ -11,6 +11,11 @@ public class ProjectileSpawner : MonoBehaviour
     {
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
         {
+            if (!AmmoTracker.AllowedToShoot())
+            {
+                return;
+            }
+            AmmoTracker.DecrementAmmo();
             Vector3 playerPos = playerTransform.position;
             Instantiate(projectilePrefab, playerPos, Quaternion.identity);
         }
