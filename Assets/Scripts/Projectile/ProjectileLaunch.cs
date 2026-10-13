@@ -4,6 +4,7 @@ public class Projectile : MonoBehaviour
 {
     Rigidbody rb;
     [SerializeField] float launchForce = 10f;
+    [SerializeField] float lifetime = 5f;
     Camera playerCamera;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,9 +27,8 @@ public class Projectile : MonoBehaviour
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         Vector3 launchDirection = playerCamera.transform.forward.normalized;
-        Debug.DrawRay(rb.position, launchDirection * 3f, Color.red, 2f);
-        Debug.Log($"Launch direction: {launchDirection}, camera rotation: {playerCamera.transform.eulerAngles}");
-
         rb.AddForce(launchDirection * launchForce, ForceMode.Impulse);
+
+        Destroy(gameObject, lifetime);
     }
 }
