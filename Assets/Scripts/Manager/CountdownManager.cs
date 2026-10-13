@@ -8,13 +8,13 @@ public class CountdownManager : MonoBehaviour
     void OnEnable()
     {
         GameStateTracker.StartAction += StartCountdown;
-        GameStateTracker.GameOverAction += StopCountdown;
+        GameStateTracker.EndAction += StopCountdown;
     }
 
     void OnDisable()
     {
         GameStateTracker.StartAction -= StartCountdown;
-        GameStateTracker.GameOverAction -= StopCountdown;
+        GameStateTracker.EndAction -= StopCountdown;
         StopCountdown();
     }
 
