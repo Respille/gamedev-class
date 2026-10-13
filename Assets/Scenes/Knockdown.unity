@@ -352,7 +352,7 @@ PrefabInstance:
       objectReference: {fileID: 483935869}
     - target: {fileID: 3666787318545588825, guid: 215da1321d53c534b8c6e10dbb09d796, type: 3}
       propertyPath: m_VersionIndex
-      value: 2435
+      value: 2438
       objectReference: {fileID: 0}
     - target: {fileID: 5681674954750044237, guid: 215da1321d53c534b8c6e10dbb09d796, type: 3}
       propertyPath: target
@@ -589,7 +589,7 @@ PrefabInstance:
       objectReference: {fileID: 1296202476}
     - target: {fileID: 6845877059507127926, guid: 76ad4a37116ba694d820189f2b95050c, type: 3}
       propertyPath: m_VersionIndex
-      value: 2408
+      value: 2411
       objectReference: {fileID: 0}
     - target: {fileID: 7850365421789132289, guid: 76ad4a37116ba694d820189f2b95050c, type: 3}
       propertyPath: m_Mesh
@@ -662,7 +662,7 @@ PrefabInstance:
       objectReference: {fileID: 1099712756}
     - target: {fileID: 6845877059507127926, guid: 76ad4a37116ba694d820189f2b95050c, type: 3}
       propertyPath: m_VersionIndex
-      value: 2408
+      value: 2411
       objectReference: {fileID: 0}
     - target: {fileID: 7850365421789132289, guid: 76ad4a37116ba694d820189f2b95050c, type: 3}
       propertyPath: m_Mesh
@@ -735,7 +735,7 @@ PrefabInstance:
       objectReference: {fileID: 1793147961}
     - target: {fileID: 6845877059507127926, guid: 76ad4a37116ba694d820189f2b95050c, type: 3}
       propertyPath: m_VersionIndex
-      value: 2408
+      value: 2411
       objectReference: {fileID: 0}
     - target: {fileID: 7850365421789132289, guid: 76ad4a37116ba694d820189f2b95050c, type: 3}
       propertyPath: m_Mesh
@@ -942,7 +942,7 @@ PrefabInstance:
       objectReference: {fileID: 1795911745}
     - target: {fileID: 3666787318545588825, guid: 215da1321d53c534b8c6e10dbb09d796, type: 3}
       propertyPath: m_VersionIndex
-      value: 2435
+      value: 2438
       objectReference: {fileID: 0}
     - target: {fileID: 5681674954750044237, guid: 215da1321d53c534b8c6e10dbb09d796, type: 3}
       propertyPath: target
@@ -1040,7 +1040,7 @@ MonoBehaviour:
   moveSpeed: 5
   gravity: -10
   jumpHeight: 1
-  spawnPosition: {x: 0, y: 0, z: 0}
+  spawnPosition: {x: 0, y: 2, z: 0}
 --- !u!114 &616276804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1237,7 +1237,7 @@ PrefabInstance:
       objectReference: {fileID: 1510287703}
     - target: {fileID: 3666787318545588825, guid: 215da1321d53c534b8c6e10dbb09d796, type: 3}
       propertyPath: m_VersionIndex
-      value: 2435
+      value: 2438
       objectReference: {fileID: 0}
     - target: {fileID: 5681674954750044237, guid: 215da1321d53c534b8c6e10dbb09d796, type: 3}
       propertyPath: target
@@ -1664,6 +1664,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moving Targets Button
       objectReference: {fileID: 0}
+    - target: {fileID: 3050648772733560674, guid: 740cee8bc8b04074cb8283bd3e7cc6c7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 218c4004d2de7ab4d8106ce58792b7a4, type: 2}
     - target: {fileID: 8507466021418941483, guid: 740cee8bc8b04074cb8283bd3e7cc6c7, type: 3}
       propertyPath: m_text
       value: 'Moving
@@ -1672,6 +1676,10 @@ PrefabInstance:
 
         Mode'
       objectReference: {fileID: 0}
+    - target: {fileID: 8507466021418941483, guid: 740cee8bc8b04074cb8283bd3e7cc6c7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 218c4004d2de7ab4d8106ce58792b7a4, type: 2}
     - target: {fileID: 8907325710344724675, guid: 740cee8bc8b04074cb8283bd3e7cc6c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -1897,7 +1905,7 @@ PrefabInstance:
       objectReference: {fileID: 18561880}
     - target: {fileID: 3666787318545588825, guid: 215da1321d53c534b8c6e10dbb09d796, type: 3}
       propertyPath: m_VersionIndex
-      value: 2435
+      value: 2438
       objectReference: {fileID: 0}
     - target: {fileID: 5681674954750044237, guid: 215da1321d53c534b8c6e10dbb09d796, type: 3}
       propertyPath: target
@@ -2166,7 +2174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2255,7 +2263,7 @@ PrefabInstance:
       objectReference: {fileID: 1700547882}
     - target: {fileID: 6845877059507127926, guid: 76ad4a37116ba694d820189f2b95050c, type: 3}
       propertyPath: m_VersionIndex
-      value: 2408
+      value: 2411
       objectReference: {fileID: 0}
     - target: {fileID: 7850365421789132289, guid: 76ad4a37116ba694d820189f2b95050c, type: 3}
       propertyPath: m_Mesh
@@ -2462,7 +2470,7 @@ PrefabInstance:
       objectReference: {fileID: 1954061280}
     - target: {fileID: 3666787318545588825, guid: 215da1321d53c534b8c6e10dbb09d796, type: 3}
       propertyPath: m_VersionIndex
-      value: 2435
+      value: 2438
       objectReference: {fileID: 0}
     - target: {fileID: 5681674954750044237, guid: 215da1321d53c534b8c6e10dbb09d796, type: 3}
       propertyPath: target
@@ -2597,7 +2605,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 7c84ecfe888335a469bd854df57d3ab0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3296,7 +3304,7 @@ PrefabInstance:
       objectReference: {fileID: 752985311}
     - target: {fileID: 3666787318545588825, guid: 215da1321d53c534b8c6e10dbb09d796, type: 3}
       propertyPath: m_VersionIndex
-      value: 2435
+      value: 2438
       objectReference: {fileID: 0}
     - target: {fileID: 5681674954750044237, guid: 215da1321d53c534b8c6e10dbb09d796, type: 3}
       propertyPath: target
@@ -4833,7 +4841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4873,7 +4881,7 @@ PrefabInstance:
       objectReference: {fileID: 2024261509}
     - target: {fileID: 3666787318545588825, guid: 215da1321d53c534b8c6e10dbb09d796, type: 3}
       propertyPath: m_VersionIndex
-      value: 2435
+      value: 2438
       objectReference: {fileID: 0}
     - target: {fileID: 5681674954750044237, guid: 215da1321d53c534b8c6e10dbb09d796, type: 3}
       propertyPath: target
@@ -5678,7 +5686,7 @@ PrefabInstance:
       objectReference: {fileID: 1225353849}
     - target: {fileID: 6845877059507127926, guid: 76ad4a37116ba694d820189f2b95050c, type: 3}
       propertyPath: m_VersionIndex
-      value: 2408
+      value: 2411
       objectReference: {fileID: 0}
     - target: {fileID: 7850365421789132289, guid: 76ad4a37116ba694d820189f2b95050c, type: 3}
       propertyPath: m_Mesh
@@ -5707,7 +5715,7 @@ PrefabInstance:
       objectReference: {fileID: 733880171}
     - target: {fileID: 3666787318545588825, guid: 215da1321d53c534b8c6e10dbb09d796, type: 3}
       propertyPath: m_VersionIndex
-      value: 2435
+      value: 2438
       objectReference: {fileID: 0}
     - target: {fileID: 5681674954750044237, guid: 215da1321d53c534b8c6e10dbb09d796, type: 3}
       propertyPath: target
@@ -5778,6 +5786,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Static Targets Button
       objectReference: {fileID: 0}
+    - target: {fileID: 3050648772733560674, guid: 740cee8bc8b04074cb8283bd3e7cc6c7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 218c4004d2de7ab4d8106ce58792b7a4, type: 2}
+    - target: {fileID: 8507466021418941483, guid: 740cee8bc8b04074cb8283bd3e7cc6c7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 218c4004d2de7ab4d8106ce58792b7a4, type: 2}
     - target: {fileID: 8907325710344724675, guid: 740cee8bc8b04074cb8283bd3e7cc6c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
