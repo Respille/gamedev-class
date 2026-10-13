@@ -3,6 +3,7 @@ using UnityEngine;
 public class CollisionDetection : MonoBehaviour
 {
     private Rigidbody rb;
+    private bool hasCollided = false;
 
     void Start()
     {    
@@ -14,7 +15,7 @@ public class CollisionDetection : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.CompareTag("Projectile"))
+        if (!hasCollided && collision.collider.CompareTag("Projectile"))
         {
             Rigidbody projectileRb = collision.rigidbody;
             Vector3 incomingVelocity = projectileRb.linearVelocity;
@@ -26,6 +27,9 @@ public class CollisionDetection : MonoBehaviour
                 contact.point,
                 ForceMode.Impulse
             );
+
+            hasCollided = true;
+            ScoreTracker.incrementScore();
         }
     }
 }
