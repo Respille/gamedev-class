@@ -12,7 +12,7 @@ public class LaserHandler : MonoBehaviour
         lineRenderer = GetComponent<LineRenderer>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         ShootLaser();
     }
@@ -27,7 +27,8 @@ public class LaserHandler : MonoBehaviour
             endPosition = hit.point; // if laser hits something, make that the end position
             if (hit.collider.CompareTag("Player"))
             {
-                print("Laser has hit player");
+                print("Test");
+                HealthTracker.DamagePlayer(0.1f);
             }
         }
 

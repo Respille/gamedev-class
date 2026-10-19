@@ -6,12 +6,12 @@ public class SphereHandler : MonoBehaviour
     [SerializeField] private LayerMask layersToDetect;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         bool isHit = Physics.CheckSphere(transform.position, radius, layersToDetect);
         if (isHit)
         {
-            print("Player hit by sphere");
+            HealthTracker.DamagePlayer(0.1f);
         }
     }
 
