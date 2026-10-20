@@ -27,7 +27,6 @@ public class LaserHandler : MonoBehaviour
             endPosition = hit.point; // if laser hits something, make that the end position
             if (hit.collider.CompareTag("Player"))
             {
-                print("Test");
                 HealthTracker.DamagePlayer(0.1f);
             }
         }

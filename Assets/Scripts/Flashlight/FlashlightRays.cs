@@ -50,7 +50,6 @@ public class FlashlightRays : MonoBehaviour
                 if (obj.TryGetComponent<InvisibleWhenUnlit>(out var inv))
                 {
                     float distance = Vector3.Distance(obj.transform.position, transform.position);
-                    print(distance);
                     if (distance <= revealRange)
                     {
                         inv.isLit = true;

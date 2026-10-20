@@ -3,14 +3,22 @@ using UnityEngine.InputSystem;
 
 public class FlashlightPlayerControl : MonoBehaviour
 {
-    [SerializeField] private Light flashlight;
+    [SerializeField] private GameObject flashlight;
+    private Light spotLight;
+    private FlashlightRays flashlightRays;
+
+    void Start()
+    {
+        spotLight = flashlight.GetComponent<Light>();
+        flashlightRays = flashlight.GetComponent<FlashlightRays>();
+    }
 
     void Update()
     {
-        if (Mouse.current != null &&
-            Mouse.current.rightButton.wasPressedThisFrame)
+        if (Mouse.current != null && Mouse.current.rightButton.wasPressedThisFrame)
         {
-            flashlight.enabled = !flashlight.enabled;
+            spotLight.enabled = !spotLight.enabled;
+            flashlightRays.enabled = !flashlightRays.enabled;
         }
     }
 }
