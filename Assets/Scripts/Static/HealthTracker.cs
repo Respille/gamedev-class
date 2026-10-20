@@ -13,6 +13,10 @@ public static class HealthTracker
     {
         CurrentHealth -= amount;
         HealthChangeAction?.Invoke();
+        if (CurrentHealth <= 0)
+        {
+            GameStateTracker.TriggerGameOver();
+        }
     }
 
 }
