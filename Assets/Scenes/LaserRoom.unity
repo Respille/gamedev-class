@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 18137330}
   m_Layer: 0
-  m_Name: Layer 1 (2)
+  m_Name: Layer 13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2109,7 +2109,7 @@ GameObject:
   m_Component:
   - component: {fileID: 274261409}
   m_Layer: 0
-  m_Name: Layer 4 (1)
+  m_Name: Layer 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2750,7 +2750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 384427202}
   m_Layer: 0
-  m_Name: Layer 2 (2)
+  m_Name: Layer 14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4377,7 +4377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 515187153}
   m_Layer: 0
-  m_Name: Layer 3 (1)
+  m_Name: Layer 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6337,8 +6337,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlashlightRays
   outerRingAngleCoefficient: 0.5
-  numberOfRings: 10
-  raysPerRing: 8
+  numberOfRings: 5
+  raysPerRing: 16
   revealRange: 10
 --- !u!43 &789390499
 Mesh:
@@ -9508,7 +9508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1116087764}
   m_Layer: 0
-  m_Name: Layer 6 (1)
+  m_Name: Layer 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14240,7 +14240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1514250835}
   m_Layer: 0
-  m_Name: Layer 2 (1)
+  m_Name: Layer 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16531,7 +16531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1717542603}
   m_Layer: 0
-  m_Name: Layer 5 (1)
+  m_Name: Layer 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17143,7 +17143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1797662359}
   m_Layer: 0
-  m_Name: Layer 1 (1)
+  m_Name: Layer 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.UIElements;
-using static UnityEngine.UI.Image;
 
 [RequireComponent(typeof(Light))]
 public class FlashlightRays : MonoBehaviour

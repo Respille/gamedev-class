@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[ExecuteAlways] // lets you see laser in the editor
+// [ExecuteAlways] // lets you see laser in the editor
 [RequireComponent(typeof(LineRenderer))]
 public class LaserHandler : MonoBehaviour
 {
