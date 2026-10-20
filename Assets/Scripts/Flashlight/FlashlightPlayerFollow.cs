@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FollowFlashlight : MonoBehaviour
+public class FlashlightPlayerFollow: MonoBehaviour
 {
     [SerializeField] private Transform followTarget;
     [SerializeField] private Vector3 positionOffset;

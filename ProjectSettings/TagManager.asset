@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - CinemachineTarget
+  - HiddenUnlessLit
   layers:
   - Default
   - TransparentFX
