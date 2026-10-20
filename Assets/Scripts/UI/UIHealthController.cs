@@ -21,6 +21,6 @@ public class UIHealthController : MonoBehaviour
 
     void ChangeText()
     {
-        healthText.text = $"Health: {Mathf.Ceil(HealthTracker.CurrentHealth)}";
+        healthText.text = $"Health: {HealthTracker.CurrentHealth}";
     }
 }

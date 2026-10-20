@@ -6,10 +6,10 @@ using UnityEngine;
 public static class HealthTracker
 {
     public static event Action HealthChangeAction;
-    public static readonly float initialHealth = 100f;
-    public static float CurrentHealth { get; private set; } = initialHealth;
+    public static readonly int initialHealth = 300;
+    public static int CurrentHealth { get; private set; } = initialHealth;
 
-    public static void DamagePlayer(float amount)
+    public static void DamagePlayer(int amount)
     {
         CurrentHealth -= amount;
         HealthChangeAction?.Invoke();

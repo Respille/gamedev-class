@@ -11,7 +11,7 @@ public class SphereHandler : MonoBehaviour
         bool isHit = Physics.CheckSphere(transform.position, radius, layersToDetect);
         if (isHit)
         {
-            HealthTracker.DamagePlayer(0.1f);
+            HealthTracker.DamagePlayer(1);
         }
     }
 
